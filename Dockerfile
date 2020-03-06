@@ -10,4 +10,8 @@ USER jovyan
 
 EXPOSE 8888
 
+COPY --chown=jovyan:jovyan tornadoapp.py /home/jovyan
+COPY --chown=jovyan:jovyan jupyterhub-singleuser /usr/bin
+
 CMD ["jupyterhub-singleuser"]
+
